@@ -36,7 +36,7 @@ class App < Sinatra::Base
       add: lambda{|a,b| a + b },
       subtract: lambda{|a,b| a - b },
       multiply: lambda{|a,b| a * b },
-      divide: lambda{|a,b| a / b } 
+      divide: lambda{|a,b| a / b }
     }
     @op = params[:operation]
     @num1 = params[:number1]
