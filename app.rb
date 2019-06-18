@@ -28,7 +28,7 @@ class App < Sinatra::Base
     params.each do |key, value|
       result << value
     end
-    result.join(" ")
+    result.join(" ") + "."
   end
 
   get '/:operation/:number1/:number2' do
