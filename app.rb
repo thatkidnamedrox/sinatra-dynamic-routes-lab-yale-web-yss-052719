@@ -38,7 +38,7 @@ class App < Sinatra::Base
       multiply: lambda{|a,b| a * b },
       divide: lambda{|a,b| a / b }
     }
-    @op = params[:operation]
+    @op = params[:operation].to_sym
     @num1 = params[:number1].to_i
     @num2 = params[:number2].to_i
     "#{operations[@op].call(@num1, @num2)}"
