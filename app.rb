@@ -35,7 +35,7 @@ class App < Sinatra::Base
     operations = {
       add: lambda{|a.b| a + b}
     }
-    operations[:add](9)
+    operations[:add](1,2)
   end
 
 
