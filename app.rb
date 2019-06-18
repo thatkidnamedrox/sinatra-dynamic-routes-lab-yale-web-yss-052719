@@ -33,9 +33,15 @@ class App < Sinatra::Base
 
   get '/:operation/:number1/:number2' do
     operations = {
-      add: lambda{|a.b| a + b}
+      add: lambda{|a,b| a + b },
+      subtract: lambda{|a,b| a - b },
+      multiply: lambda{|a,b| a * b },
+      divide: lambda{|a,b| a / b } 
     }
-    operations[:add](1,2)
+    @op = params[:operation]
+    @num1 = params[:number1]
+    @num2 = params[:number2]
+    operations[@op].call(@num1, @num2)
   end
 
 
