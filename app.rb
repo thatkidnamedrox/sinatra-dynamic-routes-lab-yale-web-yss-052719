@@ -33,7 +33,7 @@ class App < Sinatra::Base
 
   get '/:operation/:number1/:number2' do
     operations = {
-      add: method(:+(name))
+      add: method(:+(n))
     }
     operations[:add](9)
   end
